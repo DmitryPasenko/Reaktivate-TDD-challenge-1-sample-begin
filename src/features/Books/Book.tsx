@@ -1,4 +1,5 @@
 import React from "react";
+import { ListItem, ListItemText } from "@mui/material";
 
 interface BookProps {
   author: string;
@@ -7,8 +8,8 @@ interface BookProps {
 
 export const Book: React.FC<BookProps> = ({ author, name }) => {
   return (
-    <div>
-      {author}: {name}
-    </div>
+    <ListItem disableGutters>
+      <ListItemText primary={name} secondary={`by ${author}`} />
+    </ListItem>
   );
 };

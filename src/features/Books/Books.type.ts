@@ -6,8 +6,3 @@ export interface BookDto {
 export interface BookAddResponse {
   status: string;
 }
-
-export interface UseBooksController {
-  booksList: BookDto[];
-  addBook: (book: BookDto) => void;
-}

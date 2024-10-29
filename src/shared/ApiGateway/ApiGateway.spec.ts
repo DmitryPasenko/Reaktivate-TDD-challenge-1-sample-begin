@@ -1,5 +1,5 @@
 import ApiGateway from "./ApiGateway";
-import { API_BASE } from "./config";
+import { API_BASE } from "../config";
 
 global.fetch = jest.fn();
 
