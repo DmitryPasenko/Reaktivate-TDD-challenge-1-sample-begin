@@ -1,4 +1,4 @@
-import { API_BASE } from "./config";
+import { API_BASE } from "../config";
 
 export default class ApiGateway {
   get = async <T>(path: string): Promise<T> => {

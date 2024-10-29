@@ -1,4 +1,4 @@
-import ApiGateway from "../Shared/ApiGateway";
+import ApiGateway from "../../shared/ApiGateway/ApiGateway";
 import { BookDto, BookAddResponse } from "./Books.type";
 
 class BooksRepository {
@@ -10,6 +10,9 @@ class BooksRepository {
 
   getBooks = async (): Promise<BookDto[]> => {
     return await this.httpGateway.get("/");
+  };
+  getPrivateBooks = async (): Promise<BookDto[]> => {
+    return await this.httpGateway.get("/private");
   };
 
   addBook = async ({ name, author }: BookDto): Promise<boolean> => {
